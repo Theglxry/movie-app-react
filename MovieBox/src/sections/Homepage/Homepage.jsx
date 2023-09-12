@@ -1,6 +1,6 @@
 // import React from 'react'
 import './Homepage.css'
-import {Hero , Footer , FeaturedImages} from "../../components/index"
+import {Hero , Footer , FeaturedMovies} from "../../components/index"
 
 
 
@@ -12,7 +12,7 @@ function Homepage() {
   return (
     <section className="homepage-wrapper">
     <Hero />
-    <FeaturedImages />
+    <FeaturedMovies />
     <Footer />
     </section>
   )

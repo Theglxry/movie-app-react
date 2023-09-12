@@ -18,12 +18,12 @@ function Hero() {
         {/* Movie Ratings */}
         <div className="flex movie-ratings">
           <div className="imdb-rating">
-            <img src={IMDB} />
+            <img src={IMDB} alt="imdb rating" />
             <p>86.0 / 100</p>
           </div>
 
           <div className="rt-rating">
-            <img src={Rottentomato} />
+            <img src={Rottentomato} alt="rotten tomato rating" />
             <p>97%</p>
           </div>
         </div>

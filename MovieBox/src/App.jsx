@@ -1,16 +1,20 @@
-// import{
-//   Hero , Footer , Nav
-// } from './components';
-// import Nav from './components/Nav';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Homepage from './sections/Homepage/Homepage';
+import Dashboard from './sections/Dashboard/Dashboard';
 
-import Homepage from './sections/Homepage/Homepage'
+function App() {
+  return (
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+        </Routes>
+      </div>
+    </Router>
+  );
+}
 
- const App = () => (
-<main>
- <Homepage /> 
+export default App;
 
- {/* <Dashboard /> */}
-</main>
- );
 
- export default App;
