@@ -7,7 +7,8 @@ import searchIcon from "../../assets/icons/search.svg";
 
 
 
-const Search = () => {
+const Search = ({onChange,value}) => {
+
   
 
   return (
@@ -16,8 +17,8 @@ const Search = () => {
         <input
           type="text"
           placeholder="What do you want to watch?"
-          // value =""
-          // onChange={(e) => setQuery(e.target.value)}
+          value={value}
+          onChange={onChange}
         />
         <div className="search-icon" >
           <img src={searchIcon} alt="Search" />
@@ -30,4 +31,6 @@ const Search = () => {
   );
 };
 
+ 
 export default Search;
+

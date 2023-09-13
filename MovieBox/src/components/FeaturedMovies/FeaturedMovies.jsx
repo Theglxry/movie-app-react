@@ -1,15 +1,17 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import axios from "axios";
 import chevron from "../../assets/icons/chevron-right.svg";
 import MovieCards from "./Moviecards";
 
 function FeaturedMovies() {
   const [topMovies, setTopMovies] = useState([]);
+  // const [genres, setGenres] = useState([]);
 
-  useEffect(() => {
-    // Define your API endpoint for fetching top movies
-    const API_KEY = "2adb7205ccfa3487102880906c6d6cc1";
-    const BASE_URL = "https://api.themoviedb.org/3";
+  // Define your API endpoint for fetching top movies
+  const API_KEY = "2adb7205ccfa3487102880906c6d6cc1";
+  const BASE_URL = "https://api.themoviedb.org/3";
+
+  const getMovies = () => {
     const apiUrl = `${BASE_URL}/discover/movie?api_key=${API_KEY}&sort_by=popularity.desc&page=1`;
 
     // Make the API request when the component mounts
@@ -23,6 +25,10 @@ function FeaturedMovies() {
       .catch((error) => {
         console.error("Error fetching top movies:", error);
       });
+  };
+
+  useEffect(() => {
+    getMovies();
   }, []);
 
   return (
@@ -30,9 +36,9 @@ function FeaturedMovies() {
       <div className="fm-wrapper">
         {/* title */}
         <div className="title-wrapper">
-          <h1> Featured Movie </h1>
+          <h1>Featured Movie</h1>
           <div className="see-more">
-            <p> see more </p>
+            <p>see more</p>
             <img src={chevron} alt="chevron right arrow" />
           </div>
         </div>
@@ -41,7 +47,7 @@ function FeaturedMovies() {
         <div className="movie-container">
           {topMovies.map((movie) => (
             <MovieCards key={movie.id} movie={movie} />
-          ))}
+          ))}{" "}
         </div>
       </div>
     </section>
@@ -49,5 +55,3 @@ function FeaturedMovies() {
 }
 
 export default FeaturedMovies;
-
-

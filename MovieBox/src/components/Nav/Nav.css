@@ -83,3 +83,33 @@
     cursor: pointer; 
  
 }
+
+
+.search-bar-container {
+  position: relative;
+
+}
+
+.search-bar-container .movie_dropdown {
+  position: absolute;
+  background: white;
+  color:black;
+  list-style: none;
+  width: 100%;
+  max-width: 300px;
+  padding:10px;
+  top:40px;
+  border-radius: 10px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+.search-bar-container .movie_dropdown  li{
+  padding:10px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  
+}
+
+.search-bar-container .movie_dropdown  li:hover{
+  background-color: aquamarine;
+}

@@ -1,5 +1,53 @@
-.dashboard {
-    background-color: aqua;
-    width: 100%;
-    height: 100vh;
+.dashboard-container {
+  width: 100%;
+  height: 100vh;
+}
+
+.content-wrapper {
+  /* border: 2px solid red; */
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+}
+
+.side-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5%;
+  padding: 4.5rem 1rem;
+  width: 14.125rem;
+  border-radius: 0rem 2.8125rem 2.8125rem 0rem;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  color: #000;
+}
+.side-menu * {
+  width: 100%;
+  height: 5.375rem;
+  border: 2px solid grey;
+}
+.side-menu .logo {
+  display: flex;
+}
+
+.main-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border: 5px solid purple;
+}
+
+.movie-display {
+  height: 100vh;
+  border-radius: 1.25rem;
+  border: 2px solid black;
+}
+
+/* display grid */
+.lower-section {
+  height: 100vh;
+
+  border: 2px solid pink;
 }
