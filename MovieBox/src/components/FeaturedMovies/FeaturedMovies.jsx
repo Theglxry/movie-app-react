@@ -2,6 +2,13 @@ import  { useEffect, useState } from "react";
 import axios from "axios";
 import chevron from "../../assets/icons/chevron-right.svg";
 import MovieCards from "./Moviecards";
+import { Link } from "react-router-dom"; // Import Link
+
+
+
+
+
+
 
 function FeaturedMovies() {
   const [topMovies, setTopMovies] = useState([]);
@@ -43,10 +50,15 @@ function FeaturedMovies() {
           </div>
         </div>
 
+
+
+
         {/* movie list */}
         <div className="movie-container">
           {topMovies.map((movie) => (
+            <Link key={movie.id} to={`/dashboard/${movie.id}`}> 
             <MovieCards key={movie.id} movie={movie} />
+            </Link>
           ))}{" "}
         </div>
       </div>
