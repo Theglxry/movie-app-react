@@ -99,7 +99,7 @@ const Nav = () => {
             <button onClick={handleSignInClick}>Sign in</button>
           </div>
 
-          <div className="hamburger-menu">
+          <div className=" hamburger-menu">
             <img src={hamburgerIcon} />
           </div>
         </div>

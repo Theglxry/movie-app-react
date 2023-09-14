@@ -72,15 +72,13 @@
     line-height: 1.5rem; 
 }
 .hamburger-menu {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 2.75rem;
+    /* height: 1.5rem; */
     background-image: url('../../assets/icons/Ellipse1.svg');
-    background-size: contain;  
+    background-size: cover;  
     background-repeat: no-repeat;
-    width: 24px; 
-    height: 24px;  
+    padding: 0.2rem;
     cursor: pointer; 
- 
 }
 
 

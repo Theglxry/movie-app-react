@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import chevron from "../../assets/icons/chevron-right.svg";
+import chevron from "../../assets/icons/Chevron-right.svg";
 import MovieCards from "./Moviecards";
 import { Link } from "react-router-dom";
 import ErrorComponent from "../ErrorComponent";
