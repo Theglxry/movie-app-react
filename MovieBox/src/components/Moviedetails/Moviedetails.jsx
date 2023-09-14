@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import collage from "../../assets/images/movie-grid.png";
 import ticketImg from "../../assets/icons/tickets.png";
 // import image from "../../assets/images/boatman.png"
-import list from "../../assets/icons/list.png";
+import list from "../../assets/icons/List.png";
 import play from "../../assets/icons/play.png";
 import star from "../../assets/icons/star.png";
 
