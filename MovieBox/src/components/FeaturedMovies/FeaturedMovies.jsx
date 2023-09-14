@@ -1,10 +1,16 @@
-import  { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import chevron from "../../assets/icons/chevron-right.svg";
 import MovieCards from "./Moviecards";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 import ErrorComponent from "../ErrorComponent";
-import ErrorImg from '../../assets/images/404.png'
+import ErrorImg from "../../assets/images/404.png";
+import './Loader.css';
+
+
+
+
+
 
 
 
@@ -21,11 +27,11 @@ function FeaturedMovies() {
   //end point for top movies
   const API_KEY = "2adb7205ccfa3487102880906c6d6cc1";
   const BASE_URL = "https://api.themoviedb.org/3";
-const [error, setError] = useState(null)
-
+  const [error, setError] = useState(null);
 
   const getMovies = () => {
-    const apiUrl = `${BASE_URL}/discover/movie?api_key=${API_KEY}&sort_by=popularity.desc&page=1`;
+    const apiUrl = `${BASE_URL}/movie/top_rated?api_key=${API_KEY}&language=en-US&page=1`;
+    // const apiUrl = `${BASE_URL}/discover/movie?api_key=${API_KEY}&sort_by=popularity.desc&page=1`;
 
     axios
       .get(apiUrl)
@@ -34,7 +40,7 @@ const [error, setError] = useState(null)
         setTopMovies(topMoviesData);
       })
       .catch((error) => {
-        setError("Error fetching movie details. Please try again later.")
+        setError("Error fetching movie details. Please try again later.");
         console.error("Error fetching movie details:", error);
       });
   };
@@ -43,16 +49,12 @@ const [error, setError] = useState(null)
     getMovies();
   }, []);
 
-
   if (error) {
-    return (
-      <ErrorComponent
-        message={error}
-        image={ErrorImg}  
-      />
-    );
+    return <ErrorComponent message={error} image={ErrorImg} />;
   }
 
+
+  
   return (
     <section className="fm-container">
       <div className="fm-wrapper">
@@ -65,14 +67,11 @@ const [error, setError] = useState(null)
           </div>
         </div>
 
-
-
-
         {/* movie list */}
         <div className="movie-container">
           {topMovies.map((movie) => (
-            <Link key={movie.id} to={`/dashboard/${movie.id}`}> 
-            <MovieCards key={movie.id} movie={movie} />
+            <Link key={movie.id} to={`/dashboard/${movie.id}`} className="LinkStyle">
+              <MovieCards key={movie.id} movie={movie} />
             </Link>
           ))}{" "}
         </div>

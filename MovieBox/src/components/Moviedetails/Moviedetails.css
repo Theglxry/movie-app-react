@@ -2,23 +2,16 @@
   width: 100%;
   border-radius: 1.25rem;
   text-align: center;
-  padding: 20px;
+  padding: 2rem;
   color: black;
   position: relative;
-
-  /* width: 500px; */
   max-height: 500px;
-  /* border: 2px solid green; */
 }
 
 .movie-display img {
   width: 100%;
   border-radius: 1.25rem;
   max-height: 450px;
-
-
-  /* width: 200px;
-  height: 260px; */
 }
 
 .movie-display .trailer {

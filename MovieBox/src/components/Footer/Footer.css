@@ -1,11 +1,8 @@
 .footer-container {
-  /* width: 30.75rem; */
-  /* height: 37.75rem; */
   height: 10rem;
   flex-shrink: 0;
   margin: 0 auto;
   color: #000;
-  /* border: 2px solid red; */
 }
 .f-w {
   width: 100%;
@@ -13,8 +10,6 @@
   flex-direction: column;
   align-items: center;
   gap: 2.25rem;
-
-  /* border: 2px solid green; */
 }
 
 .f-w .socials {
@@ -40,4 +35,7 @@
   color: #6b7280;
   font-size: 1.125rem;
   font-weight: 700;
+}
+@media  (min-width: 280px) and (max-width: 768px) {
+
 }

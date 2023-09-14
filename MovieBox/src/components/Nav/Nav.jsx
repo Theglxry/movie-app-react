@@ -1,6 +1,6 @@
 import logo from "../../assets/icons/Logo.svg";
 import { useNavigate } from "react-router-dom";
-
+import mobileLogo from '../../assets/icons/tv.png';
 import hamburgerIcon from "../../assets/icons/Menu-alt4.svg";
 import Search from "../Searchbar/search";
 import "./Nav.css";
@@ -63,8 +63,10 @@ const Nav = () => {
     <header className="header-wrapper">
       <nav className="flex nav-wrapper">
         <div className="logo">
-          <img src={logo}
+          <img className="desktopLogo" src={logo}
             alt="Logo" />
+
+            <img className="mobileLogo" src={mobileLogo} />
         </div>
 
         <div className="search-bar-container">

@@ -1,12 +1,14 @@
 .header-wrapper {
-  /* padding: 2rem 8rem; */
-  
-  flex-shrink: 0;
+   width: 100%;
 }
+
 .nav-wrapper{
   justify-content: space-between;
 }
 
+.nav-wrapper .logo .mobileLogo{
+  display: none;
+}
 .search-bar {
   /* width: 32.8125rem; */
   width: 45.8125rem;
@@ -52,9 +54,6 @@
   border:2px solid grey;
 
 }
-
-
-
  
 .sign-in {
     margin-right: 1rem;  
@@ -112,4 +111,22 @@
 
 .search-bar-container .movie_dropdown  li:hover{
   background-color: aquamarine;
+}
+
+@media  (min-width: 280px) and (max-width: 768px) {
+.nav-wrapper .logo .desktopLogo {
+display: none;
+}
+
+.nav-wrapper .logo .mobileLogo {
+  display: block;
+  margin-right: 1rem;
+  
+}
+
+.search-bar {
+  width: auto;
+
+}
+
 }

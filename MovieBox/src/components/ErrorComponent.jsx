@@ -16,7 +16,8 @@ function ErrorComponent() {
 
 
   return (
-    <div className='error-message'><img src={ErrorImg} alt='Error' style={posterStyle}/>
+    <div className='error-message'>
+    <img src={ErrorImg} alt='Error' style={posterStyle}/>
     <p>Error loading movies</p>
     </div>
   )

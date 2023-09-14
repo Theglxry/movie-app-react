@@ -36,3 +36,6 @@ body{
   background: rgba(190, 18, 60, 0.10);
   color: #BE123C;
 }
+.error-message{
+  padding: 4rem;
+}

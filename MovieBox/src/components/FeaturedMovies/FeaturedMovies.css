@@ -5,38 +5,37 @@
 
 .fm-wrapper {
   margin: 0 auto;
-  /* border: 2px solid purple; */
-  /* height: auto; */
 }
 
 .title-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* border: 2px solid red; */
 }
 .title-wrapper h1 {
-color: #000;
-font-size: 2.25rem;
-font-weight: 700;
+  color: #000;
+  font-size: 2.25rem;
+  font-weight: 700;
 }
 
 .see-more {
-display: flex;
-color:  #BE123C;
-font-size: 1.125rem;
+  display: flex;
+  color: #be123c;
+  font-size: 1.125rem;
 }
 
 .movie-container {
   width: 100%;
   margin-top: 3rem;
-
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 5rem;
+}
 
-
-  /* border: 2px solid green; */
+ 
+.LinkStyle {
+  text-decoration: none; 
+  color: #333;  
 }
