@@ -40,37 +40,34 @@ const Moviedetails = ({ movie }) => {
         <div className="grid-left">
           <div className="grid-item">
             <div className="trpr">
-              <p>{title}</p>
+              <p data-testid ="movie-title">{title}</p>
 
-              <p>{release_date} </p>
+              <p data-testid= "movie-release-date">{release_date} </p>
 
               <p> PG:13</p>
 
-              <p>{run_time}</p>
+              <p data-testid= "movie-runtime">{run_time}</p>
 
               <button className="btn">Action</button>
               <button className="btn">Drama</button>
             </div>
 
             <div className="overview">
-              <p>{overview}</p>
+              <p data-testid ="movie-overview">{overview}</p>
             </div>
           </div>
 
           <div className="grid-item">
             <ul>
               <li>
-                {" "}
-                Director :<span> Lorem ipsum </span>{" "}
+                Director :<span> Lorem ipsum </span>
               </li>
               <li>
-                {" "}
-                Writers :<span> JLorem ipsum dolor sit amet </span>{" "}
+                Writers :<span> JLorem ipsum dolor sit amet </span>
               </li>
 
               <li>
-                {" "}
-                Stars :{" "}
+                Stars :
                 <span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </span>{" "}
               </li>
             </ul>
@@ -78,6 +75,8 @@ const Moviedetails = ({ movie }) => {
 
           <div className="grid-item">TOP RATED MOVIES</div>
         </div>
+
+        
 
         {/* right container */}
         <div className="flex-container">

@@ -5,12 +5,20 @@
   padding: 20px;
   color: black;
   position: relative;
+
+  /* width: 500px; */
+  max-height: 500px;
+  /* border: 2px solid green; */
 }
 
 .movie-display img {
-  max-width: 100%;
+  width: 100%;
   border-radius: 1.25rem;
-  height: auto;
+  max-height: 450px;
+
+
+  /* width: 200px;
+  height: 260px; */
 }
 
 .movie-display .trailer {
@@ -23,7 +31,7 @@
 .movie-display .trailer img {
   background: url(../../assets/icons/Ellipse-4.svg);
   background-size: cover;
-  padding: 1rem;
+  padding: 1.257rem;
 }
 
 .movie-display .trailer p {
@@ -42,7 +50,6 @@
   gap: 20px;
   padding:1rem 4rem;
   width: 100%;
-  border: 2px solid pink;
   color: #000;
 }
 
@@ -54,7 +61,6 @@
 .grid-container .grid-left .grid-item {
   flex: 1;
   padding: 20px;
-  /* border: 1px solid #ccc; */
 }
 .grid-container .grid-left .grid-item .trpr {
   display: flex;
@@ -62,7 +68,7 @@
 
   font-size: 1.4375rem;
   width: 100%;
-  gap: 10%;
+  gap: 5%;
 }
 .grid-container .grid-left .grid-item .btn {
   width: 5.25rem;
@@ -98,9 +104,7 @@
   font-size: 1.25rem;
   font-style: normal;
   font-weight: 400;
-  /* line-height: normal; */
   list-style-type: none;
-  /* border: 2px solid red; */
 }
 
 .grid-container .grid-item ul li{
@@ -111,20 +115,22 @@
 .flex-container {
   display: flex;
   flex-direction: column;
-  /* border: 2px solid red; */
 }
 
 .flex-item {
   width: 100%;
   flex: 1;
   padding: 20px;
-  /* border: 1px solid #0bab66; */
 }
 .flex-item .star {
   display: flex;
   align-items: center;
   justify-content: right;
+  margin-right: 1rem;
+  font-size: 1.25rem;
 }
+ 
+
 .flex-item div {
   margin-bottom: 1rem;
 }
