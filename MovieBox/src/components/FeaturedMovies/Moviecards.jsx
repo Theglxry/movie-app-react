@@ -15,7 +15,7 @@ const Moviecards = ({ movie }) => {
   const poster = `${imageBase}${movie?.poster_path}`;
   const title = movie?.title;
   const release_date = movie?.release_date;
-  const vote_count = movie?.vote_count;
+  // const vote_count = movie?.vote_count;
   const vote_average = movie?.vote_average;
 
   return (
@@ -53,7 +53,7 @@ const Moviecards = ({ movie }) => {
 
           <div className="rt-rating">
             <img src={Rottentomato} alt="rotten tomato rating" />
-            <p>{vote_count}%</p>
+            <p>97%</p>
           </div>
         </div>
 

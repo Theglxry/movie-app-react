@@ -18,7 +18,7 @@ function Footer() {
     <footer className="footer-container">
       <div className="f-w">
         {/* socials */}
-        <div className="socials">
+        <div className="flex socials">
           <img src={fbIcon} alt="facebook icon" />
           <img src={igIcon} alt="instagram icon" />
           <img src={twitterIcon} alt="twitter icon"/>
@@ -28,7 +28,7 @@ function Footer() {
 
 
         {/*links*/}
-        <div className="links">
+        <div className="flex links">
           <p> Conditions of Use </p>
           <p>Privacy & Policy</p>
           <p>Press Room</p>

@@ -1,8 +1,6 @@
 .footer-container {
   height: 10rem;
-  flex-shrink: 0;
   margin: 0 auto;
-  color: #000;
 }
 .f-w {
   width: 100%;
@@ -13,29 +11,25 @@
 }
 
 .f-w .socials {
-  display: flex;
-  align-items: center;
   gap: 3rem;
 }
 .f-w .links {
-  display: flex;
-  align-items: flex-start;
   gap: 3rem;
-}
-.f-w .links p {
-  color: var(--gray-900, #111827);
-  font-family: DM Sans;
+  color: #111827;
   font-size: 1.125rem;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
 }
+ 
 
 .f-w .deets {
   color: #6b7280;
   font-size: 1.125rem;
   font-weight: 700;
 }
-@media  (min-width: 280px) and (max-width: 768px) {
+ 
 
+@media (max-width:768px){
+ .f-w .links{
+  font-size: 10px;
+ }
 }

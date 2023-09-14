@@ -25,8 +25,8 @@ const Nav = () => {
 
     const apiUrl = `${BASE_URL}/discover/movie?api_key=${API_KEY}&sort_by=popularity.desc&page=1`;
     // Make the API request when the component mounts
-    axios.get(apiUrl).then((response) => { // Assuming the API response contains an array of top movies
-      const topMoviesData = response.data.results; // Slice to get the top 10 movies
+    axios.get(apiUrl).then((response) => { 
+      const topMoviesData = response.data.results;  
       setTopMovies(topMoviesData);
     }).catch((error) => {
       console.error("Error fetching top movies:", error);

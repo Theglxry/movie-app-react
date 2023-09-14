@@ -4,8 +4,7 @@
   align-items: flex-start;
   gap: 0.75rem;
   position: relative;
-  margin-bottom: 4rem;
-  width: 15.625rem;
+  width: 100%;
 }
 .movie-card img {
   max-width: 100%;
@@ -46,13 +45,14 @@
 
 .tl-wrapper .love-icon {
   position: absolute;
-  /* padding: 0.1875rem 0.5rem; */
-
   top: 10px;
   right: 10px;
   background: url("../../assets//icons/Ellipse3.svg");
   background-size: contain;
   background-repeat: no-repeat;
+}
+.details{
+  width: 100%;
 }
 .details .release-date,
 .title {
@@ -60,10 +60,16 @@
 }
 
 .details .title {
-  width: 100%;
+color: #111827;
+font-size: 1.125rem;
+font-weight: 700;
 }
 .movie-ratings {
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+}
+
+@media(max-width:500px){
+   
 }
