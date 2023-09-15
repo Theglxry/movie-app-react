@@ -70,7 +70,7 @@ function FeaturedMovies() {
         {/* movie list */}
         <div className="movie-container">
           {topMovies.map((movie) => (
-            <Link key={movie.id} to={`/dashboard/${movie.id}`} className="LinkStyle">
+            <Link key={movie.id} to={`/movie/${movie.id}`} className="LinkStyle">
               <MovieCards key={movie.id} movie={movie} />
             </Link>
           ))}{" "}

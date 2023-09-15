@@ -160,9 +160,7 @@
     width: 100%;
     padding: none;
   }
-
-  .movie-display .poster{
-  }
+ 
   .grid-container {
     display: flex;
     flex-direction: column;

@@ -6,10 +6,17 @@ import ticketImg from "../../assets/icons/tickets.png";
 import list from "../../assets/icons/List.png";
 import play from "../../assets/icons/Play.svg";
 import star from "../../assets/icons/Star.png";
+// import { useParams } from "react-router-dom";
+
+
+
+
+
 
 const imageBase = `https://image.tmdb.org/t/p/original`;
 
 const Moviedetails = ({ movie }) => {
+
   const poster = `${imageBase}${movie?.poster_path}`;
 
   const title = movie?.title;
