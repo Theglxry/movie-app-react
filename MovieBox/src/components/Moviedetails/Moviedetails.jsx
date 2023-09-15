@@ -7,7 +7,6 @@ import list from "../../assets/icons/List.png";
 import play from "../../assets/icons/Play.svg";
 import star from "../../assets/icons/Star.png";
 
-
 const imageBase = `https://image.tmdb.org/t/p/original`;
 
 const Moviedetails = ({ movie }) => {
@@ -22,38 +21,61 @@ const Moviedetails = ({ movie }) => {
     height: "auto",
   };
 
- 
+  const formatDateToUTC = (dateString) => {
+    // Create a Date object from the given dateString
+    const date = new Date(dateString);
 
+    // Format the date to the desired UTC format
+    const options = {
+      weekday: "short",
+      day: "2-digit",
+      month: "short",
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      timeZoneName: "short",
+    };
+
+    return date.toLocaleString("en-US", options);
+  };
+
+  // ...
+
+  const releaseDateUTC = formatDateToUTC(release_date);
 
   return (
     <>
       <div className="movie-display">
-        <img src={poster} alt={title} style={posterStyle} />
+        <img className="poster" src={poster} alt={title} style={posterStyle} />
         {/* <img src={image} alt={title}/> */}
         <div className="trailer">
           <img className="play" src={play} /> <p> Watch Trailer </p>{" "}
         </div>
       </div>
 
+
+
+
       <div className="grid-container">
         {/* left container */}
         <div className="grid-left">
           <div className="grid-item">
             <div className="trpr">
-              <p data-testid ="movie-title">{title}</p>
+              <p data-testid="movie-title">{title} • </p>
 
-              <p data-testid= "movie-release-date">{release_date} </p>
+              <p data-testid="movie-release-date">{releaseDateUTC}•</p>
 
-              <p> PG:13</p>
+              {/* <p> PG:13</p> */}
 
-              <p data-testid= "movie-runtime">{run_time}</p>
+              <p data-testid="movie-runtime">{run_time}•</p>
 
               <button className="btn">Action</button>
               <button className="btn">Drama</button>
             </div>
 
             <div className="overview">
-              <p data-testid ="movie-overview">{overview}</p>
+              <p data-testid="movie-overview">{overview}</p>
             </div>
           </div>
 
@@ -68,7 +90,11 @@ const Moviedetails = ({ movie }) => {
 
               <li>
                 Stars :
-                <span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </span>{" "}
+                <span>
+                  {" "}
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor{" "}
+                </span>{" "}
               </li>
             </ul>
           </div>
@@ -76,13 +102,11 @@ const Moviedetails = ({ movie }) => {
           <div className="grid-item">TOP RATED MOVIES</div>
         </div>
 
-        
-
         {/* right container */}
         <div className="flex-container">
           <div className="flex-item">
             <div className="star">
-              <img src={star} alt="star "/>
+              <img src={star} alt="star " />
               <p> 8.5|350K</p>{" "}
             </div>
             <div className="showtime">

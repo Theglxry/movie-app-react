@@ -12,7 +12,7 @@
   flex-direction: column;
   gap: 10%;
   padding: 4.5rem 0;
-  width: 14.125rem;
+  width: 15rem;
   border-radius: 0rem 2.8125rem 2.8125rem 0rem;
   border: 1px solid rgba(0, 0, 0, 0.3);
   color: #000;
@@ -41,8 +41,7 @@
   align-items: center;
   padding: 0.5rem;
 }
-
-.logo img {
+.logo .desktopLogo {
   margin-right: -10.75rem;
 }
 
@@ -86,7 +85,6 @@
 
 .movie-quizes button {
   height: 1.875rem;
-  flex-shrink: 0;
   border-radius: 1.875rem;
   background: rgba(190, 18, 60, 0.2);
   color: #be123c;
@@ -101,9 +99,22 @@
   display: flex;
   flex-direction: column;
   padding: 0rem 2rem;
-
-  /* border: 2px solid grey; */
 }
 
-@media (max-width: 768) {
+@media (max-width: 768px) {
+.side-menu span {
+  display: none;
+}
+.side-menu{
+  display: none;
+  padding: 2rem 0;
+}
+
+.side-menu .ml {
+  display: none;
+}
+
+.main-content{
+  padding: 0;
+}
 }

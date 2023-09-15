@@ -13,6 +13,12 @@ import TVshow from "../../assets/icons/TVshow.png";
 import Calendar from "../../assets/icons/Calendar.png";
 import Logout from "../../assets/icons/Logout.png";
 
+
+
+
+
+
+
 function Dashboard() {
   const { id } = useParams();
   const [movieDetails, setMovieDetails] = useState(null);
@@ -45,7 +51,7 @@ function Dashboard() {
       <div className="content-wrapper">
         <div className="side-menu">
           <div className="logo">
-            <img src={logo} alt="logo image" />
+            <img className="desktopLogo" src={logo} alt="logo image" />
             <span className="logo-text">MovieBox</span>
           </div>
 

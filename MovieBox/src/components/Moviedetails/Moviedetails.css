@@ -8,7 +8,7 @@
   max-height: 500px;
 }
 
-.movie-display img {
+.movie-display .poster {
   width: 100%;
   border-radius: 1.25rem;
   max-height: 450px;
@@ -21,7 +21,7 @@
   color: #fff;
 }
 
-.movie-display .trailer img {
+.movie-display .trailer .play {
   background: url(../../assets/icons/Ellipse-4.svg);
   background-size: cover;
   padding: 1.257rem;
@@ -61,7 +61,7 @@
 
   font-size: 1.4375rem;
   width: 100%;
-  gap: 5%;
+  /* gap: 5%; */
 }
 .grid-container .grid-left .grid-item .btn {
   width: 5.25rem;
@@ -156,8 +156,21 @@
 }
 
 @media (max-width: 768px) {
+  .movie-display{
+    width: 100%;
+    padding: none;
+  }
+
+  .movie-display .poster{
+  }
   .grid-container {
     display: flex;
     flex-direction: column;
+    padding: 0;
+  }
+
+  .grid-container .trpr p{
+    font-size: 10px;
+    /* border: 2px solid red; */
   }
 }

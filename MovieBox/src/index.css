@@ -35,6 +35,7 @@ body{
 .active{
   background: rgba(190, 18, 60, 0.10);
   color: #BE123C;
+  border-right:5px solid #BE123C;
 }
 .error-message{
   padding: 4rem;
