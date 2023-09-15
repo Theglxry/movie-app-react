@@ -22,13 +22,32 @@ import Logout from "../../assets/icons/Logout.png";
 function Dashboard() {
   const { id } = useParams();
   const [movieDetails, setMovieDetails] = useState(null);
+  const [genres, setGenres] = useState([]); 
+
   const [error, setError] = useState(null);
 
   useEffect(() => {
     const API_KEY = "2adb7205ccfa3487102880906c6d6cc1";
     const BASE_URL = "https://api.themoviedb.org/3";
     const apiUrl = `${BASE_URL}/movie/${id}?api_key=${API_KEY}`;
+    const genresUrl = `${BASE_URL}/genre/movie/list?api_key=${API_KEY}&language=en-US`;
 
+
+// Fetch genre data
+axios
+.get(genresUrl)
+.then((response) => {
+  const genresData = response.data.genres;
+  setGenres(genresData);
+})
+.catch((error) => {
+  console.error("Error fetching genre data:", error);
+});
+
+
+
+
+    // fetch movie url 
     axios
       .get(apiUrl)
       .then((response) => {
@@ -96,7 +115,7 @@ function Dashboard() {
         </div>
 
         <div className="main-content">
-          <Moviedetails movie={movieDetails} />
+          <Moviedetails movie={movieDetails} genres={genres} />
         </div>
       </div>
     </section>

@@ -2,31 +2,39 @@ import "./Moviedetails.css";
 import PropTypes from "prop-types";
 import collage from "../../assets/images/movie-grid.png";
 import ticketImg from "../../assets/icons/tickets.png";
-// import image from "../../assets/images/boatman.png"
 import list from "../../assets/icons/List.png";
 import play from "../../assets/icons/Play.svg";
 import star from "../../assets/icons/Star.png";
-// import { useParams } from "react-router-dom";
 
 const imageBase = `https://image.tmdb.org/t/p/original`;
 
-const Moviedetails = ({ movie }) => {
+const Moviedetails = ({ movie, genres }) => {
+  if (!movie) {
+    return <div>Loading...</div>;
+  }
+  console.log("Movie Object:", movie);
   const poster = `${imageBase}${movie?.poster_path}`;
-
   const title = movie?.title;
   const release_date = movie?.release_date;
-  const run_time = movie?.run_time;
+  const runtime = movie?.runtime;
+  const runtimeDisplay = runtime ? `${runtime} min` : "N/A";
   const overview = movie?.overview;
+
+  const genreNames = movie.genres
+    ? movie.genres.map((genre) => {
+        const genreData = genres.find((g) => g.id === genre.id);
+        return genreData ? genreData.name : "Unknown";
+      })
+    : [];
+
   const posterStyle = {
     maxWidth: "100%",
     height: "auto",
   };
 
   const formatDateToUTC = (dateString) => {
-    // Create a Date object from the given dateString
     const date = new Date(dateString);
 
-    // Format the date to the desired UTC format
     const options = {
       weekday: "short",
       day: "2-digit",
@@ -37,11 +45,8 @@ const Moviedetails = ({ movie }) => {
       second: "2-digit",
       timeZoneName: "short",
     };
-
     return date.toLocaleString("en-US", options);
   };
-
-  // ...
 
   const releaseDateUTC = formatDateToUTC(release_date);
 
@@ -49,7 +54,6 @@ const Moviedetails = ({ movie }) => {
     <>
       <div className="movie-display">
         <img className="poster" src={poster} alt={title} style={posterStyle} />
-        {/* <img src={image} alt={title}/> */}
         <div className="trailer">
           <img className="play" src={play} /> <p> Watch Trailer </p>{" "}
         </div>
@@ -67,12 +71,15 @@ const Moviedetails = ({ movie }) => {
 
                 {/* <p> PG:13</p> */}
 
-                <p data-testid="movie-runtime">{run_time}•</p>
+                <p data-testid="movie-runtime"> {runtimeDisplay} </p>
               </div>
 
-              <div className="flex">
-                <button className="btn">Action</button>
-                <button className="btn">Drama</button>
+              <div className="flex genre">
+                {genreNames.map((genreName, index) => (
+                  <button key={index} className="btn">
+                    {genreName}
+                  </button>
+                ))}
               </div>
             </div>
 
@@ -135,6 +142,7 @@ const Moviedetails = ({ movie }) => {
 };
 
 Moviedetails.propTypes = {
-  movie: PropTypes.object.isRequired,
+  movie: PropTypes.object,
+  genres: PropTypes.array,
 };
 export default Moviedetails;
