@@ -58,14 +58,12 @@
 .grid-container .grid-left .grid-item .trpr {
   display: flex;
   justify-content: flex-start;
-
   font-size: 1.4375rem;
   width: 100%;
-  /* gap: 5%; */
+  gap: 5%;
 }
 .grid-container .grid-left .grid-item .btn {
   width: 5.25rem;
-  /* height: 1.875rem; */
   border-radius: 0.9375rem;
   color: #b91c1c;
   font-family: Poppins;
@@ -104,7 +102,20 @@
   margin-bottom: 1rem;
   border-bottom: 1px solid rgba(232, 232, 232, 0.25);
 }
- 
+ .grid-container .grid-item .t-a{
+  border-radius: 0.625rem;
+border: 1px solid #C7C7C7;
+background: rgba(255, 255, 255, 0.80);
+  gap: 5%;
+ }
+ .grid-container .grid-item .flex .toprated{
+  border-radius: 0.625rem;
+  background: #BE123C;
+  padding: 1rem;
+  color: #FFF;
+
+ }
+
 .flex-container {
   display: flex;
   flex-direction: column;
@@ -155,12 +166,24 @@
   width: 100%;
 }
 
+
+
+
+
+
+
 @media (max-width: 768px) {
   .movie-display{
     width: 100%;
     padding: none;
   }
  
+  .movie-display .trailer {
+    position: absolute;
+    left: 35%;
+    top: 35%;
+    color: #fff;
+  }
   .grid-container {
     display: flex;
     flex-direction: column;
@@ -169,6 +192,20 @@
 
   .grid-container .trpr p{
     font-size: 10px;
-    /* border: 2px solid red; */
   }
+
+.grid-container .grid-left .grid-item .trpr {
+flex-direction: column;
+}
+
+
+.grid-container .grid-left .grid-item ul {
+font-size: 10px;
+}
+
+.grid-container .grid-left .grid-item .overview {
+  font-size: 14px;
+}
+
+
 }

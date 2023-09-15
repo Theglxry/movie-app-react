@@ -8,15 +8,9 @@ import play from "../../assets/icons/Play.svg";
 import star from "../../assets/icons/Star.png";
 // import { useParams } from "react-router-dom";
 
-
-
-
-
-
 const imageBase = `https://image.tmdb.org/t/p/original`;
 
 const Moviedetails = ({ movie }) => {
-
   const poster = `${imageBase}${movie?.poster_path}`;
 
   const title = movie?.title;
@@ -61,24 +55,25 @@ const Moviedetails = ({ movie }) => {
         </div>
       </div>
 
-
-
-
       <div className="grid-container">
         {/* left container */}
         <div className="grid-left">
-          <div className="grid-item">
+          <div className=" grid-item">
             <div className="trpr">
-              <p data-testid="movie-title">{title} • </p>
+              <div className="flex">
+                <p data-testid="movie-title">{title} • </p>
 
-              <p data-testid="movie-release-date">{releaseDateUTC}•</p>
+                <p data-testid="movie-release-date">{releaseDateUTC}•</p>
 
-              {/* <p> PG:13</p> */}
+                {/* <p> PG:13</p> */}
 
-              <p data-testid="movie-runtime">{run_time}•</p>
+                <p data-testid="movie-runtime">{run_time}•</p>
+              </div>
 
-              <button className="btn">Action</button>
-              <button className="btn">Drama</button>
+              <div className="flex">
+                <button className="btn">Action</button>
+                <button className="btn">Drama</button>
+              </div>
             </div>
 
             <div className="overview">
@@ -106,7 +101,12 @@ const Moviedetails = ({ movie }) => {
             </ul>
           </div>
 
-          <div className="grid-item">TOP RATED MOVIES</div>
+          <div className="grid-item">
+            <div className="flex t-a">
+              <div className="toprated"> Top rated movie #65</div>
+              <div className="awards">Awards 9 nominations</div>
+            </div>
+          </div>
         </div>
 
         {/* right container */}
