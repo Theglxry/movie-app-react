@@ -5,6 +5,7 @@
   background-image: url("../../assets/images/Poster.png");
   background-size: cover;
   background-repeat: no-repeat;
+
 }
 
 .description-box {
@@ -130,6 +131,7 @@
 @media  (max-width: 768px) {
   .hero-wrapper {
     padding: 1rem 2rem;
+    background-position: center;
   }
 
   .description-box {
